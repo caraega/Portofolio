@@ -109,17 +109,7 @@ section:before {
 
 }
 
-#work-1:hover::after {
-    content: "Web Project";
-}
 
-#work-2:hover::after {
-    content: "Web Freelance";
-}
-
-#work-3:hover::after {
-    content: "Sofware Engineer";
-}
 
 #work-1 {
     grid-area: work-1;
@@ -133,7 +123,36 @@ section:before {
     grid-area: work-3;
 }
 
+#work-1:hover::after {
+    content: "Web Project";
+}
 
+#work-2:hover::after {
+    content: "Softaware Project";
+}
+
+#work-3:hover::after {
+    content: "Sofware Engineer";
+}
+
+.contact {
+    padding-bottom: 128px;
+}
+
+
+
+.contact::before {
+    content: "Contact";
+}
+
+.contact-form {
+    border: 1px solid black;
+    padding: 64px 34px;
+}
+
+.form-label {
+    font-weight: 700;
+}
 
 /* home animation */
 @keyframes upDown {
