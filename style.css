@@ -1,11 +1,9 @@
 section {
     padding-top: 128px;
     position: relative;
-
 }
 
-
-section:before {
+section::before {
     z-index: -1;
     content: '';
     font-size: 72px;
@@ -14,13 +12,15 @@ section:before {
     position: absolute;
     font-weight: 700;
     top: 20px;
-    left: -27px;
+    left: -30px;
 }
 
 .navbar {
     background-color: white;
     box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.25);
 }
+
+
 
 .btn.button {
     border: 3px solid black;
@@ -34,6 +34,7 @@ section:before {
     color: white;
 }
 
+
 .home h1 {
     font-size: 72px;
 }
@@ -41,7 +42,6 @@ section:before {
 .home h3 {
     font-size: 48px;
 }
-
 
 .home img {
     width: 100%;
@@ -60,14 +60,13 @@ section:before {
 }
 
 .about-exp-item {
-    margin-top: 24px;
+    margin-top: 32px;
 }
 
 .about-exp-item-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
 }
 
 .about-exp-item-detail {
@@ -75,17 +74,14 @@ section:before {
 }
 
 .work::before {
-    content: "Work"
+    content: 'Work'
 }
 
 .work-img {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas:
-        "work-1 work-2"
-        "work-3 work-3";
+    grid-template-areas: "work-1 work-2""work-3 work-3";
     gap: 16px;
-
 }
 
 .work-img img {
@@ -97,7 +93,7 @@ section:before {
 }
 
 .work-img-item:hover::after {
-    content: "";
+    content: '';
     width: 100%;
     height: 100%;
     position: absolute;
@@ -110,71 +106,62 @@ section:before {
     justify-content: center;
     font-weight: 500;
     font-size: 24px;
-
-
 }
-
-
 
 #work-1 {
     grid-area: work-1;
+}
+
+#work-1:hover::after {
+    content: 'Web Project';
 }
 
 #work-2 {
     grid-area: work-2;
 }
 
+#work-2:hover::after {
+    content: 'Software Project';
+}
+
 #work-3 {
     grid-area: work-3;
 }
 
-#work-1:hover::after {
-    content: "Web Project";
-}
-
-#work-2:hover::after {
-    content: "Softaware Project";
-}
-
 #work-3:hover::after {
-    content: "Sofware Engineer";
+    content: 'Software Project';
 }
 
 .contact {
     padding-bottom: 128px;
 }
 
-
-
 .contact::before {
-    content: "Contact";
+    content: 'Contact';
 }
 
 .contact-form {
     border: 1px solid black;
-    padding: 64px 34px;
+    padding: 64px 32px;
 }
 
 .form-label {
     font-weight: 700;
 }
 
-
-@media only screen and(max-width: 768px) {
+@media only screen and (max-width: 768px) {
     .home img {
         width: 50%;
-
     }
 }
 
-@media only screen and(max-width: 576px) {
+@media only screen and (max-width: 576px) {
     section::before {
         left: -10px;
         font-size: 64px;
     }
 }
 
-/* home animation */
 @keyframes upDown {
     0% {
         transform: translateY(0);
@@ -185,7 +172,6 @@ section:before {
     }
 
     100% {
-        transform: translateY(0px);
+        transform: translateY(0);
     }
-
 }
